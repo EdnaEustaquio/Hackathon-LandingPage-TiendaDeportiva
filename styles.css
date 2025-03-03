@@ -1,13 +1,156 @@
+/*Consejos*/
 .bg-cafe {
-    background-color: #f1e4d6; /* Color café */
+    background-color: #f1e4d6; /* Fondo*/
 }
 
 .text-cafe {
-    color: #2c1f0b; /* Color café */
+    color: #2c1f0b; /* Letra*/
 }
 
-.img-equal-size {
+.img-equal-size { /*tamaño imagenes*/
     width: 100%;       
     height: 200px;     
     object-fit: cover; 
+}
+
+/* Fondo personalizado para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Fondo suave de color azul */
+    color: #000000;
+    margin: 0;
+    padding-top: 50px;
+}
+
+/* Contenedor principal, asegurando que el formulario ocupe toda la sección */
+.container-fluid {
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Estilo para la imagen de fondo del formulario */
+.formulario {
+    position: relative;
+    z-index: 1; /* Para asegurar que el formulario esté encima de la imagen */
+    background: url('6567a084f70bef75c19c7270_home_header-1.jpg') no-repeat center center; /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: #fff; /* El texto será blanco para resaltar sobre la imagen */
+    max-width: 600px;
+    margin: 0 auto; /* Centrado en la pantalla */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease-in-out; /* Transición suave */
+}
+
+/* Cuando la imagen se oculta, mostramos el formulario */
+.map-overlay.hidden + .formulario {
+    opacity: 1; /* Hace visible el formulario cuando la imagen desaparece */
+}
+
+/* Estilo para la imagen oculta */
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 100% de la altura de la pantalla */
+    background: url('senderismo-header-bg.jpg') no-repeat center center; /* Ruta de la imagen que se ocultará */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el espacio */
+    z-index: 0; /* Asegura que la imagen esté detrás del formulario */
+    opacity: 1; /* Inicialmente visible */
+    transition: opacity 1s ease-in-out; /* Transición suave para desaparecer */
+}
+
+/* Cuando la imagen se oculta, se aplica la clase .hidden */
+.map-overlay.hidden {
+    opacity: 0; /* Desaparece la imagen oculta */
+}
+
+/* Formato para los campos de entrada */
+input.form-control {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente para los inputs */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px; /* Espacio entre los campos */
+}
+
+/* Botón atractivo */
+button {
+    background-color: #388e3c; /* Color verde */
+    border-color: #388e3c;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Botón que cubre todo el ancho */
+}
+
+button:hover {
+    background-color: #2c6e2f;
+    border-color: #2c6e2f;
+}
+
+/* Títulos */
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff; /* Título blanco para mejor visibilidad */
+}
+
+h1 {
+    color: #38080875; /* Título principal en verde */
+}
+
+/* Ajustes para el título y subtítulo */
+.container-fluid.text-center h1 {
+    margin-bottom: 20px;
+}
+
+.container-fluid.text-center h3 small {
+    color: #000000 !important; / /* Color del texto secundario */
+
+/* Sección productos */
+#productos-senderismo {
+    padding: 0;
+    background-color: #f8f9fa;
+    position: relative;
+    height: 100hv;
+}
+
+#productos-senderismo .full-background {
+    width: 100%;
+    height: 100vh; /* Asegura que la imagen cubra toda la pantalla */
+    object-fit: cover; /* Hace que la imagen se recorte si es necesario */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(20%, 0%); /* Centra el texto en la imagen */
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hace que el texto sea legible sobre la imagen */
+    z-index: 10; /* Asegura que el texto esté encima de la imagen */
+}
+
+
+#productos-senderismo .hotspot {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+#productos-senderismo .hotspot:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
