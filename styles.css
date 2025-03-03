@@ -1,0 +1,13 @@
+.bg-cafe {
+    background-color: #f1e4d6; /* Color café */
+}
+
+.text-cafe {
+    color: #2c1f0b; /* Color café */
+}
+
+.img-equal-size {
+    width: 100%;       
+    height: 200px;     
+    object-fit: cover; 
+}
