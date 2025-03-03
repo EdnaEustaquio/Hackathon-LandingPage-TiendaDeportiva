@@ -99,7 +99,8 @@ h1 {
 
 .container-fluid.text-center h3 small {
     color: #000000 !important; / /* Color del texto secundario */
-=======
+
+/* Sección productos */
 #productos-senderismo {
     padding: 0;
     background-color: #f8f9fa;
