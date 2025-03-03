@@ -1,0 +1,38 @@
+#productos-senderismo {
+    padding: 0;
+    background-color: #f8f9fa;
+    position: relative;
+    height: 100hv;
+}
+
+#productos-senderismo .full-background {
+    width: 100%;
+    height: 100vh; /* Asegura que la imagen cubra toda la pantalla */
+    object-fit: cover; /* Hace que la imagen se recorte si es necesario */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(20%, 0%); /* Centra el texto en la imagen */
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hace que el texto sea legible sobre la imagen */
+    z-index: 10; /* Asegura que el texto esté encima de la imagen */
+}
+
+
+#productos-senderismo .hotspot {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+#productos-senderismo .hotspot:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
