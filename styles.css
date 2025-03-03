@@ -1,3 +1,18 @@
+/*Consejos*/
+.bg-cafe {
+    background-color: #f1e4d6; /* Fondo*/
+}
+
+.text-cafe {
+    color: #2c1f0b; /* Letra*/
+}
+
+.img-equal-size { /*tamaño imagenes*/
+    width: 100%;       
+    height: 200px;     
+    object-fit: cover; 
+}
+
 /* Fondo personalizado para el cuerpo */
 body {
     font-family: Arial, sans-serif;
